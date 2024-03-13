@@ -5,6 +5,7 @@ https://github.com/taishan1994/pytorch_bert_bilstm_crf_ner/blob/16ee44df462dfa9f
 
 ## torch CRF 转onnx
 torch的CRF在转ONNX的时候，因为里面有一些for循环，trace会导致seq_length固定，无法支持变长，准确率有问题，所以一般是trace和script混合着用。
+目前改造的这个版本在单个sample和batch的情况下都可运行，且准确率与torch一致。
 
 ## 版本说明：
 onnx==1.15.0
